@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Journal</title>
+</head>
+<body>
+  <h1>My Journal</h1>
+  <a href="/new">New Entry</a>
+  <ul>
+    {% for entry in entries %}
+      <li>
+        <strong>{{ entry[1] }}</strong> — {{ entry[3] }}<br>
+        <pre>{{ entry[2] }}</pre>
+        <a href="/delete/{{ entry[0] }}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
